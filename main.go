@@ -6,7 +6,7 @@ import (
 
 	sdl "github.com/veandco/go-sdl2/sdl"
 
-	beeper "github.com/sugoto/go-chip8/beeper"
+	// beeper "github.com/sugoto/go-chip8/beeper"
 	emu "github.com/sugoto/go-chip8/emulator"
 )
 
@@ -45,16 +45,16 @@ func main() {
 	defer sdl.Quit()
 
 	// Initialize beeper after sdl
-	beep, beepErr := beeper.Init()
-	if beepErr != nil {
-		panic(beepErr)
-	}
-	defer beep.Close()
+	// beep, beepErr := beeper.Init()
+	// if beepErr != nil {
+	// 	panic(beepErr)
+	// }
+	// defer beep.Close()
 
 	// Function to be called for beep sound
-	c8.AddBeep(func() {
-		beep.Play()
-	})
+	// c8.AddBeep(func() {
+	// 	beep.Play()
+	// })
 
 	// Create window, chip8 resolution with given modifier
 	window, windowErr := sdl.CreateWindow("Chip 8 - "+fileName, sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED, CHIP_8_WIDTH*modifier, CHIP_8_HEIGHT*modifier, sdl.WINDOW_SHOWN)
