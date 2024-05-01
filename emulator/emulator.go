@@ -26,23 +26,24 @@ var fontSet = []uint8{
 }
 
 type Chip8 struct {
-	display [32][64]uint8 // display size
+	display [32][64]uint8 // Display memory representing the screen (32 rows x 64 columns)
 
-	memory [4096]uint8 // memory size 4k
-	vx     [16]uint8   // cpu registers V0-VF
-	key    [16]uint8   // input key
-	stack  [16]uint16  // program counter stack
+	memory [4096]uint8 // Memory of the Chip-8 system (4KB)
 
-	oc uint16 // current opcode
-	pc uint16 // program counter
-	sp uint16 // stack pointer
-	iv uint16 // index register
+	vx    [16]uint8  // CPU registers V0-VF
+	key   [16]uint8  // Input keys
+	stack [16]uint16 // Program counter stack
 
-	delayTimer uint8
-	soundTimer uint8
+	oc uint16 // Current opcode
+	pc uint16 // Program counter
+	sp uint16 // Stack pointer
+	iv uint16 // Index register
 
-	shouldDraw bool
-	beeper     func()
+	delayTimer uint8 // Delay timer
+	soundTimer uint8 // Sound timer
+
+	shouldDraw bool   // Flag indicating if the screen should be redrawn
+	beeper     func() // Function to be called for audio output
 }
 
 func Init() *Chip8 {

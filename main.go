@@ -6,7 +6,7 @@ import (
 
 	sdl "github.com/veandco/go-sdl2/sdl"
 
-	// beeper "github.com/sugoto/go-chip8/beeper"
+	// sound "github.com/sugoto/go-chip8/sound"
 	emu "github.com/sugoto/go-chip8/emulator"
 )
 
