@@ -1,5 +1,6 @@
 package magic_numbers
 
+// Constants for the Chip-8 emulator
 const (
     PCStart = 0x200
     OpcodeMask = 0xF000
