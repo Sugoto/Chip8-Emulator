@@ -46,6 +46,7 @@ type Chip8 struct {
 	beeper     func() // Function to be called for audio output
 }
 
+// Init initializes the Chip-8 emulator and returns a pointer to the Chip8 struct
 func Init() *Chip8 {
 	instance := &Chip8{
 		shouldDraw: true,
