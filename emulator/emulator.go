@@ -64,6 +64,7 @@ func (c *Chip8) Buffer() [32][64]uint8 {
 	return c.display
 }
 
+// Draw returns the value of the shouldDraw flag and resets it
 func (c *Chip8) Draw() bool {
 	sd := c.shouldDraw
 	c.shouldDraw = false
