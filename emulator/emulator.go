@@ -59,6 +59,7 @@ func Init() *Chip8 {
 	return instance
 }
 
+// Buffer returns the display buffer of the Chip-8 emulator
 func (c *Chip8) Buffer() [32][64]uint8 {
 	return c.display
 }
