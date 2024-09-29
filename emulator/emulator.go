@@ -328,7 +328,7 @@ func (c *Chip8) LoadProgram(fileName string) error {
 	}
 
 	for i := 0; i < len(buffer); i++ {
-		c.memory[i+512] = buffer[i]
+		c.memory[i+512] = buffer[i] // load program into memory starting at 0x200
 	}
 
 	return nil
