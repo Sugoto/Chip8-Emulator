@@ -322,7 +322,7 @@ func (c *Chip8) LoadProgram(fileName string) error {
 		return fmt.Errorf("program size bigger than memory")
 	}
 
-	buffer := make([]byte, fStat.Size())
+	buffer := make([]byte, fStat.Size()) // read file into buffer
 	if _, readErr := file.Read(buffer); readErr != nil {
 		return readErr
 	}
