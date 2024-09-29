@@ -306,6 +306,7 @@ func (c *Chip8) Cycle() {
 	}
 }
 
+// LoadProgram loads a program into the memory of the Chip-8 emulator
 func (c *Chip8) LoadProgram(fileName string) error {
 	file, fileErr := os.OpenFile(fileName, os.O_RDONLY, 0777)
 	if fileErr != nil {
