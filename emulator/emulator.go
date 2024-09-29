@@ -71,6 +71,7 @@ func (c *Chip8) Draw() bool {
 	return sd
 }
 
+// AddBeep adds a function to be called for audio output
 func (c *Chip8) AddBeep(fn func()) {
 	c.beeper = fn
 }
