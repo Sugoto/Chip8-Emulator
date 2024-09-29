@@ -314,7 +314,7 @@ func (c *Chip8) LoadProgram(fileName string) error {
 	}
 	defer file.Close()
 
-	fStat, fStatErr := file.Stat()
+	fStat, fStatErr := file.Stat() // get file size
 	if fStatErr != nil {
 		return fStatErr
 	}
