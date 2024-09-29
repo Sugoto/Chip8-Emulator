@@ -76,6 +76,7 @@ func (c *Chip8) AddBeep(fn func()) {
 	c.beeper = fn
 }
 
+// Key sets the value of a key in the Chip-8 emulator
 func (c *Chip8) Key(num uint8, down bool) {
 	if down {
 		c.key[num] = 1
