@@ -85,6 +85,7 @@ func (c *Chip8) Key(num uint8, down bool) {
 	}
 }
 
+// Cycle executes a single cycle of the Chip-8 emulator
 func (c *Chip8) Cycle() {
 	c.oc = (uint16(c.memory[c.pc]) << 8) | uint16(c.memory[c.pc+1])
 
